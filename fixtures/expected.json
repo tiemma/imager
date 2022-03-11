@@ -1,0 +1,18 @@
+{
+  "https://github.com/app-sre/container-images.git:c260deaf135fc0efaab365ea234a5b86b3ead404": {
+    "container-images/jiralert/Dockerfile": [
+      "registry.access.redhat.com/ubi8/go-toolset:latest",
+      "registry.access.redhat.com/ubi8-minimal:8.2"
+    ],
+    "error": []
+  },
+  "https://github.com/app-sre/qontract-reconcile.git:30af65af14a2dce962df923446afff24dd8f123e": {
+    "error": [],
+    "qontract-reconcile/dockerfiles/Dockerfile": [
+      "quay.io/app-sre/qontract-reconcile-base:0.2.1"
+    ],
+    "qontract-reconcile/dockerfiles/Dockerfile.test": [
+      "quay.io/centos/centos:7"
+    ]
+  }
+}
