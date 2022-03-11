@@ -15,7 +15,9 @@ spec:
             requests:
               cpu: "0.1"
               memory: "50Mi"
-          args: [ "--input", "${REPOSITORY_URL}" ]
+          command: [ "sh", "-c" ]
+          args: [ "/imager --input $(REPOSITORY_URL)" ]
           env:
-            - REPOSITORY_URL:
+            - name: REPOSITORY_URL
+              value: "https://gist.githubusercontent.com/jmelis/c60e61a893248244dc4fa12b946585c4/raw/25d39f67f2405330a6314cad64fac423a171162c/sources.txt"
       restartPolicy: Never
