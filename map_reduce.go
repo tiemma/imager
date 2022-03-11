@@ -35,8 +35,8 @@ func worker(repository repository, wg *sync.WaitGroup, ch chan result) {
 		return
 	}
 
-	err := filepath.Walk(repository.Path(), func(path string, info fs.FileInfo, err error) error {
-		if info.IsDir() {
+	err := filepath.WalkDir(repository.Path(), func(path string, d fs.DirEntry, err error) error {
+		if d.IsDir() {
 			return nil
 		}
 
